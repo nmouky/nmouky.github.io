@@ -1,8 +1,8 @@
 body {
     font-family: Arial, sans-serif;
     text-align: center;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: rgb(213, 235, 213);
+    color: rgb(26, 90, 26);
     margin: 0;
-    padding: 0px;
+    padding: 20px;
 }
