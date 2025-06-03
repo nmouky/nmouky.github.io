@@ -148,7 +148,9 @@ nav .right a:last-child:hover {
     /*NAVBAR*/
     nav {padding: 0 20px;}
 
-    nav .right a {font-size:30px;}
+    nav .left a {font-size:20;}
+
+    nav .right a {font-size:20px;}
 
     nav .right a:last-child {
         color: var(--text-color);
@@ -156,5 +158,7 @@ nav .right a:last-child:hover {
         padding: 0px;
     }
 
-    nav .right a span {display:none;}
+    nav .right a span { 
+        display:none;
+    }
 }
