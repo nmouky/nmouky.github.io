@@ -144,6 +144,7 @@ nav .right a:last-child:hover {
     }
     .hero-section .headshot img {
         width: 300px;
+        flex:2;
     }
 }
 
