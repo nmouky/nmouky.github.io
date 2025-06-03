@@ -144,7 +144,7 @@ nav .right a:last-child:hover {
     }
 }
 
-@media (max-width:600px) {
+@media (max-width:400px) {
     /*NAVBAR*/
     nav {padding: 0 20px;}
 
