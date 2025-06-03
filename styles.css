@@ -148,9 +148,9 @@ nav .right a:last-child:hover {
     /*NAVBAR*/
     nav {padding: 0 20px;}
 
-    nav .left a {font-size:20;}
+    nav .left a {font-size:12;}
 
-    nav .right a {font-size:20px;}
+    nav .right a {font-size:12px;}
 
     nav .right a:last-child {
         color: var(--text-color);
