@@ -18,7 +18,7 @@ html {
 
 
 body {
-    font-family: Georgia;
+    font-family: Arial, Helvetica, sans-serif;
     text-align: left;
     background-color: rgb(225, 239, 225);
     color: rgb(26, 90, 26);
@@ -37,14 +37,14 @@ nav {
     justify-content: space-between;
     align-items: center;
 
-    padding: 0 50px;
+    padding: 0 100px;
     height: 80px;
 }
 
 nav .left a {
     color:var(--text-color);
-    font-size:22px;
-    font-weight:600;
+    font-size: 22px;
+    font-weight: 600;
 }
 
 nav .right a {
@@ -71,6 +71,7 @@ nav .right a span {
     align-items: center;
     padding: 0 50px;
     margin: 50px 0;
+    margin-bottom: 100px
     gap: 40px;
 }
 
@@ -82,12 +83,15 @@ nav .right a span {
 .hero-section .headshot {
     /*size: 5px;*/
     flex: 2;
+    display: flex;
+    justify-content: right;
+    
 }
 
 .hero-section .headshot img {
     /*size: 5px;*/
-    width: 300px;
-    border-radius: 90%;
+    width: 10px;
+    border-radius: 50%;
     flex: 2;
 }
 .hero-section .text h2 {
