@@ -71,7 +71,7 @@ nav .right a span {
     align-items: center;
     padding: 0 50px;
     margin: 50px 0;
-    margin-bottom: 100px
+    margin-bottom: 100px;
     gap: 40px;
 }
 
@@ -90,7 +90,7 @@ nav .right a span {
 
 .hero-section .headshot img {
     /*size: 5px;*/
-    width: 10px;
+    width: 300px;
     border-radius: 50%;
     flex: 2;
 }
@@ -115,6 +115,21 @@ nav .right a span {
 .hero-section .links a:hover {
     color: rgb(26, 90, 26);
     border: 2px solid rgb(26, 90, 26)
+}
+
+@media  (max-width: 850px) {
+    .hero-section .text h2 {
+        font-size: 35px;
+    }
+}
+
+@media  (max-width: 740px) {
+    .hero-section  {
+        flex-direction: column-reverse;
+    }
+    .hero-section .headshot img {
+        width: 300px;
+    }
 }
 
 @media (max-width:600px) {
