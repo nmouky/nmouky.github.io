@@ -23,8 +23,8 @@ body {
     background-color: rgb(225, 239, 225);
     color: rgb(26, 90, 26);
     margin: 0;
-    padding: 20px;
-   max-width: 2550px;
+    padding: 0px; 
+    max-width: 2550px;
 }
 
 a {
@@ -67,7 +67,7 @@ nav .right a {
 nav .right a:last-child {
     color:black;
     background-color: whitesmoke;
-    padding: 5px 15px;
+    padding: 5px 5px;
     border-radius: 5px;
 }
 
@@ -83,7 +83,7 @@ nav .right  a:hover {
 nav .right a:last-child:hover {
     color:var(--background-color);
     background-color: var(--link-color);
-    padding: 5px 15px;
+    padding: 5px 5px;
     border-radius: 5px;
 }
 
@@ -100,7 +100,10 @@ nav .right a:last-child:hover {
 
 .hero-section .text {
     flex: 5;
-    margin-left:100px;
+}
+
+.hero-section .text p{
+    margin-top: 20px;
 }
 
 
@@ -318,7 +321,7 @@ nav .right a:last-child:hover {
     }
 
      nav .left {
-        font-size:20px;
+        font-size:10px;
     }
 
     nav .right a {
@@ -341,7 +344,10 @@ nav .right a:last-child:hover {
     .hero-section .text h2 {
         display: flex;
         flex-direction: column;
-        text-align: left;
+        text-align: center;
+        margin-left: auto;
+        font-size: 30px;
+        padding: 0px 100px;
     }
 
     .hero-section .headshot img {
