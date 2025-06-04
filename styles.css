@@ -102,8 +102,13 @@ nav .right a:last-child:hover {
     flex: 3;
 }
 
+
+.hero-section .text h2 {
+    font-size: 50px;
+}
+
 .hero-section .text p{
-    margin-top: 20px;
+    margin-top: 40px;
 }
 
 
@@ -116,15 +121,12 @@ nav .right a:last-child:hover {
 }
 
 .hero-section .headshot img {
-    width: 350px;
+    width: 300px;
     border-radius: 50%;
     flex: 2;
     margin-right: 100px;
 }
 
-.hero-section .text h2 {
-    font-size: 35px;
-}
 
 .hero-section .links {
     margin-top: 25px;
@@ -173,16 +175,16 @@ nav .right a:last-child:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 175px;
-    padding: 10px 20px;
-    margin: 10px;
-    border: 1.5px solid;
+    width: 190px;
+    padding: 0px 5px;
+    margin: 5px;
+    border: 2px solid;
     border-radius: 10px;
 
 }
 
 .skills-section .cells .cell span {
-    font-size: 14px;
+    font-size: 18px;
 }
 
 .skills-section .cells .cell img {
@@ -191,6 +193,37 @@ nav .right a:last-child:hover {
     object-fit: contain;
     border-radius: 5px;
     margin: 10px;
+}
+
+.skills-section .cells a {
+    padding: 0px px;
+    border-radius: 5px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+    transition: .1s;
+}
+.skills-section .cells a .cell:hover {
+    color: var(--link-color);
+    border: 2px solid rgb(168, 62, 5);
+}
+
+.skills-section .cells .python-cell{
+    position:relative;
+}
+
+.skills-section .cells .python-cell .hover-gif {
+    position:relative;
+    display: none;
+    z-index: 1;
+    border-radius: 5px;
+}
+
+.skills-section .cells .python-cell:hover .static-img {
+    display: none;
+}
+
+.skills-section .cells .python-cell:hover .hover-gif {
+    display:flex;
 }
 
 /* Section 3: Projects */
@@ -320,13 +353,17 @@ nav .right a:last-child:hover {
         padding: 0 10px;
     }
 
-     nav .left {
-        font-size:10px;
+     nav .left a{
+        font-size:20px;
     }
 
     nav .right a {
-        font-size:30px;
+        font-size:14px;
         padding: 0px;
+    }
+
+    nav .right a span { 
+        display:none;
     }
 
     nav .right a:last-child {
@@ -335,19 +372,18 @@ nav .right a:last-child:hover {
         padding: 0px;
     }
 
-    nav .right a span { 
-        display:none;
-    }
-
     /* Section 1: Hero */
- 
+
+    .hero-section {
+        padding: 0 20px;
+    }
     .hero-section .text h2 {
         display: flex;
         flex-direction: column;
         text-align: center;
         margin-left: auto;
         font-size: 30px;
-        padding: 0px 100px;
+        padding: 0px 0px;
     }
 
     .hero-section .headshot img {
@@ -371,6 +407,7 @@ nav .right a:last-child:hover {
     .skills-section {
         padding: 0 20px;
     }
+
     .skills-section .cells .cell span {
         font-size:16px;
     } 
