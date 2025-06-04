@@ -24,6 +24,7 @@ body {
     color: rgb(26, 90, 26);
     margin: 0;
     padding: 20px;
+    max-width: 1400px;
 }
 
 a {
@@ -138,12 +139,13 @@ nav .right a:last-child:hover {
 
 .skills-section h2 {
     text-align: center;
-    font-size: 40px;
+    font-size: 35px;
 }
 
 .skills-section .text {
     text-align: center;
-    font-size: 30px;
+    font-size: 20px;
+    margin-top: 10px;
     margin-bottom: 20px;
 }
 
@@ -157,7 +159,7 @@ nav .right a:last-child:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 200px;
+    width: 175px;
     padding: 10px 20px;
     margin: 10px;
     border: 1.5px solid;
@@ -183,6 +185,11 @@ nav .right a:last-child:hover {
     margin-bottom:100px;
 }
 
+.projects-section h2{
+    font-size: 35px;
+    text-align: center;
+}
+
 /* Section 4: Contact */
 .contact-section {
     padding: 0 40px;
@@ -199,9 +206,9 @@ nav .right a:last-child:hover {
 }
 
 .contact-section .group .text {
+    font-size:20px ;
     flex:3;
-    margin-top: 20px;
-    
+    margin-top: 10px;
 }
 
 .contact-section .group form {
@@ -350,4 +357,8 @@ nav .right a:last-child:hover {
         font-size:16px;
     } 
     
+    /* Section 4: Contact */
+    .contact-section {
+        padding: 0 20px;
+    }
 }
