@@ -108,7 +108,7 @@ nav .right a:last-child:hover {
 }
 
 .hero-section .text h2 {
-    font-size: 45px;
+    font-size: 35px;
 }
 
 .hero-section .links {
@@ -253,6 +253,12 @@ nav .right a:last-child:hover {
 
 /* Media */
 @media  (max-width: 850px) {
+    /*NAVBAR*/
+    nav {padding: 0 20px;}
+
+    nav .right a {
+        font-size:14px;
+    }
     /* Section 1: Hero */
     .hero-section .text h2 {
         font-size: 35px;
@@ -260,22 +266,45 @@ nav .right a:last-child:hover {
 }
 
 @media  (max-width: 740px) {
-    /* Section 1: Hero */
-    .hero-section  {
-    flex-direction: column-reverse;
-    }
-    .hero-section .headshot img {
-        width: 300px;
-        flex:2;
-    }
-}
-
-@media (max-width:600px) {
     /*NAVBAR*/
     nav {padding: 0 20px;}
 
     nav .right a {
         font-size:14px;
+    }
+    
+    /* Section 1: Hero */
+    .hero-section  {
+    flex-direction: column-reverse;
+    }
+
+    .hero-section .headshot img {
+        width: 300px;
+        flex:2;
+    }
+    
+    .hero-section .text h2 {
+        font-size: 35px;
+    }
+    
+    /* Section 4: Contact */
+    .contact-section .group {
+        flex-direction:column;
+    }
+}
+
+@media (max-width:600px) {
+    /*NAVBAR*/
+    nav {
+        padding: 0 10px;
+    }
+
+     nav .left {
+        font-size:30px;
+    }
+
+    nav .right a {
+        font-size:25px;
     }
 
     nav .right a:last-child {
@@ -297,6 +326,22 @@ nav .right a:last-child:hover {
         font-size: 30px;
         text-align: center;
     }
+
+    .hero-section .text p {
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    .hero-section .links a {
+        font-size:14px;
+        display: flex;
+        flex-direction: column; /* stacks icon over text */
+        align-items: center;     /* centers horizontally */
+        justify-content: center; /* centers vertically if needed */
+        text-align: center;       /* optional spacing */
+        text-decoration: none;   /* optional: remove underline */       /* keep text color consistent */
+    }
+    
     /* Section 2: Skills */
     .skills-section {
         padding: 0 20px;
@@ -304,4 +349,5 @@ nav .right a:last-child:hover {
     .skills-section .cells .cell span {
         font-size:16px;
     } 
-} 
+    
+}
