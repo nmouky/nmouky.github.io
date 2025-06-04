@@ -329,18 +329,8 @@ nav .right a:last-child:hover {
 
     /* Section 1: Hero */
  
-    .hero-section {
-        padding: 0 20px;
-    }
-    .hero-section .text h2 {
-        font-size: 30px;
-        text-align: center;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
+    .hero-section .text h2,
     .hero-section .text p {
-        margin-top: 10px;
         text-align: center;
         margin-left: auto;
         margin-right: auto;
