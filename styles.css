@@ -242,9 +242,10 @@ nav .right a:last-child:hover {
     flex-wrap: wrap;
     gap: 2rem;
     justify-content: center;
+    margin-top: 50px;
 }
 
-.project {
+.projects .project {
     flex: 1 1 300px;
     max-width: 350px;
     background: #fff;
@@ -252,7 +253,30 @@ nav .right a:last-child:hover {
     box-shadow: 0 2px 8px rgba(0,0,0,0.07);
     padding: 1rem;
     text-align: left;
+    align-items: center; /* Centers items vertically */
+    justify-content: center; /* Centers items horizontally */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Aligns text to the left */
+
+
 }
+
+.projects .project h3 {
+    text-align: center;
+    width: 100%; /* Ensures the h3 takes up the full width */
+    display: block; /* Ensures it's behaving as a block-level element */
+    margin-bottom: 5px;
+}
+
+.projects .project img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto; /* Centers image horizontally */
+    max-width: 100%;
+    height: auto;
+}
+
 
 /* Section 4: Contact */
 .contact-section {
