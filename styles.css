@@ -60,13 +60,13 @@ nav .right a {
     color:whitesmoke;
     font-size: 22px;
     padding: 5px 15px;
-    margin: 0 10px;
+    margin: 5 10px;
 }
 
 nav .right a:last-child {
     color:black;
     background-color: whitesmoke;
-    padding: 5px 5px;
+    padding: 5px 10px;
     border-radius: 5px;
 }
 
@@ -175,7 +175,7 @@ nav .right a:last-child:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 190px;
+    width: 150px;
     padding: 0px 5px;
     margin: 5px;
     border: 2px solid;
@@ -184,7 +184,7 @@ nav .right a:last-child:hover {
 }
 
 .skills-section .cells .cell span {
-    font-size: 18px;
+    font-size: 10px;
 }
 
 .skills-section .cells .cell img {
@@ -237,9 +237,26 @@ nav .right a:last-child:hover {
     text-align: center;
 }
 
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.project {
+    flex: 1 1 300px;
+    max-width: 350px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    padding: 1rem;
+    text-align: left;
+}
+
 /* Section 4: Contact */
 .contact-section {
-    padding: 0 40px;
+    padding: 0 160px;
     margin-bottom:100px;
 }
 
@@ -321,7 +338,7 @@ nav .right a:last-child:hover {
 
 @media  (max-width: 740px) {
     /*NAVBAR*/
-    nav {padding: 0 20px;}
+    nav {padding: 0px 20px;}
 
     nav .right a {
         font-size:14px;
@@ -329,18 +346,34 @@ nav .right a:last-child:hover {
     
     /* Section 1: Hero */
     .hero-section  {
-    flex-direction: column-reverse;
+        padding: 0 30px;
+        flex-direction: column-reverse;
     }
 
     .hero-section .headshot img {
-        width: 300px;
-        flex:2;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        display:flex;
+        margin-left: auto;
+        margin-right: auto;
     }
     
     .hero-section .text h2 {
-        font-size: 35px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin-left: auto;
+        font-size: 30px;
+        padding: 0px 0px;
     }
-    
+    /* Section 2: Skills */
+    .skills-section {
+        padding: 0 30px;
+    }
+
+    .skills-section .cells .cell span {
+        font-size:16px;
+    } 
     /* Section 4: Contact */
     .contact-section .group {
         flex-direction:column;
@@ -377,6 +410,7 @@ nav .right a:last-child:hover {
     .hero-section {
         padding: 0 20px;
     }
+    
     .hero-section .text h2 {
         display: flex;
         flex-direction: column;
