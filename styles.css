@@ -228,7 +228,7 @@ nav .right a:last-child:hover {
 
 /* Section 3: Projects */
 .projects-section {
-    padding: 0 40px;
+    padding: 0 160px;
     margin-bottom:100px;
 }
 
@@ -241,7 +241,7 @@ nav .right a:last-child:hover {
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
-    justify-content: center;
+    justify-content: left;
     margin-top: 50px;
 }
 
@@ -259,14 +259,29 @@ nav .right a:last-child:hover {
     flex-direction: column;
     align-items: flex-start; /* Aligns text to the left */
 
+}
 
+.projects .project {
+    flex: 1 1 300px;
+    max-width: 350px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    padding: 1rem;
+    text-align: left;
+    align-items: center; /* Centers items vertically */
+    justify-content: center; /* Centers items horizontally */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Aligns text to the left */
 }
 
 .projects .project h3 {
     text-align: center;
     width: 100%; /* Ensures the h3 takes up the full width */
     display: block; /* Ensures it's behaving as a block-level element */
-    margin-bottom: 5px;
+    margin-bottom: 20px;
+    background-color:  #eab997;
 }
 
 .projects .project img {
@@ -274,9 +289,52 @@ nav .right a:last-child:hover {
     margin-left: auto;
     margin-right: auto; /* Centers image horizontally */
     max-width: 100%;
-    height: auto;
+    height: 45%;
 }
 
+
+.projects .umg-project {
+    flex: 1 1 300px;
+    max-width: 350px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    padding: 1rem;
+    text-align: left;
+    align-items: center; /* Centers items vertically */
+    justify-content: center; /* Centers items horizontally */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Aligns text to the left */
+}
+
+.projects .umg-project h3 {
+    text-align: center;
+    width: 100%; /* Ensures the h3 takes up the full width */
+    display: block; /* Ensures it's behaving as a block-level element */
+    margin-bottom: 20px;
+    background-color: lightblue;
+}
+
+.projects .umg-project img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto; /* Centers image horizontally */
+    max-width: 100%;
+    height: 50%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.projects .project:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 1);
+}
+
+.projects .umg-project:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 1);
+}
 
 /* Section 4: Contact */
 .contact-section {
