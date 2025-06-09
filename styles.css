@@ -512,12 +512,12 @@ nav .right a:last-child:hover {
     }
 
      nav .left a{
-        font-size:20px;
+        font-size:30px;
     }
 
     nav .right a {
         font-size:30px;
-        padding: 5px;
+        padding: 10px;
     }
 
     nav .right a span { 
@@ -527,7 +527,7 @@ nav .right a:last-child:hover {
     nav .right a:last-child {
         color: whitesmoke;
         background-color: transparent;
-        padding: 5px;
+        padding: 10px;
     }
 
     /* Section 1: Hero */
