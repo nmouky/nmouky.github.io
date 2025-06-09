@@ -527,7 +527,7 @@ nav .right a:last-child:hover {
     nav .right a:last-child {
         color: whitesmoke;
         background-color: transparent;
-        padding: 0px;
+        padding: 5px;
     }
 
     /* Section 1: Hero */
