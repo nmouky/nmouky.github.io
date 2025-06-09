@@ -117,36 +117,55 @@
     <!-- SECTION 3: Projects -->
     <section id="projects" class="projects-section">
     <h2>Projects🏗️</h2>
-    <div class="projects">        
-        <div class="project">
-        <h3>Data Engineering</h3>
-        <img src="Images/Finance Dashboard.png" alt="Data Analytics Dashboard" class="project-img">
-        <div class="project-desc">
-            <h4>Insights Dashboard</h4>
-            <p>Developed an interactiv e dashboard using Python, Dash, and Plotly to visualize business KPIs and trends. Integrated with SQL Server for real-time data updates.</p>
+    <div class="carousel-wrapper">
+        <button class="carousel-btn left" onclick="scrollProjects(-1)">&#10094;</button>
+
+        <div class="projects-carousel">
+        <div class="projects">
+            <div class="project">
+            <h3>Data Engineering</h3>
+            <img src="Images/Finance Dashboard.png" alt="Dashboard">
+            <div class="project-desc">
+                <h4>Insights Dashboard</h4>
+                <p>Developed a dashboard using Python, Dash, and Plotly...</p>
+            </div>
+            </div>
+            <div class="umg-project">
+            <h3>Machine Learning</h3>
+            <img src="Images/umg.jpg" alt="Model">
+            <div class="project-desc">
+                <h4>Predictive Model</h4>
+                <p>Built a model to forecast churn with scikit-learn...</p>
+            </div>
+            </div>
+            <div class="football-project">
+            <h3>Hybrid</h3>
+            <img src="Images/football.png" alt="Analytics">
+            <div class="project-desc">
+                <h4>Insights Dashboard</h4>
+                <p>Scraped player data and built an insurance model...</p>
+            </div>
+            </div>
+            <div class="football-project">
+            <h3>Hybrid</h3>
+            <img src="Images/football.png" alt="Analytics">
+            <div class="project-desc">
+                <h4>Insights Dashboard</h4>
+                <p>Another project with Transfermarkt data.</p>
+            </div>
+            </div>
+            <div class="football-project">
+            <h3>Hybrid</h3>
+            <img src="Images/football.png" alt="Analytics">
+            <div class="project-desc">
+                <h4>Insights Dashboard</h4>
+                <p>Another project with Transfermarkt data.</p>
+            </div>
+            </div>
         </div>
         </div>
 
-        <div class="umg-project">
-        <h3>Machine Learning</h3>
-        <img src="Images/umg.jpg" alt="Machine Learning Model" class="project-img">
-        <div class="project-desc">
-            <h4>Predictive Model</h4>
-            <p>Built a machine learning model in scikit-learn to forecast customer churn, improving retention strategy. Visualized results with Seaborn and Matplotlib.</p>
-        </div>
-        </div>
-
-        <div class="football-project">
-        <h3>Hybrid</h3>
-        <img src="Images/football.png" alt="Data Analytics Dashboard" class="project-img">
-        <div class="project-desc">
-            <h4>Insights Dashboard</h4>
-            <p>Scraped and ingested data football player data from transfermarkt.com
-                This was used to gather player injuries and build an insurance pricing model.
-            </p>
-        </div>
-        </div>
-
+        <button class="carousel-btn right" onclick="scrollProjects(1)">&#10095;</button>
     </div>
     </section>
 

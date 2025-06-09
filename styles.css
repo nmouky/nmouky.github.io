@@ -379,6 +379,55 @@ nav .right a:last-child:hover {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 1);
 }
 
+
+/* PROJECTS CAROUSEL */ 
+.carousel-wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.projects-carousel {
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  /* Hide scrollbar - cross browser */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE 10+ */
+}
+
+.projects-carousel::-webkit-scrollbar {
+  display: none; /* Safari & Chrome */
+}
+
+
+.projects {
+  display: flex;
+  gap: 2rem;
+  padding: 0 2rem;
+  width: max-content;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+  font-size: 2rem;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.carousel-btn.left {
+  left: 0;
+}
+
+.carousel-btn.right {
+  right: 0;
+}
+
 /* Section 4: Contact */
 .contact-section {
     padding: 0 160px;
