@@ -193,5 +193,51 @@
     </section>
     </main>
 
+    <script>
+    let scrollIndex = 0;
+
+    window.onload = () => {
+    const carousel = document.querySelector('.projects-carousel');
+    const leftBtn = document.querySelector('.carousel-btn.left');
+    const rightBtn = document.querySelector('.carousel-btn.right');
+
+    carousel.scrollLeft = 0;
+
+    // Initially hide left button because at start
+    leftBtn.style.display = 'none';
+
+    function updateButtons() {
+        const maxScroll = carousel.scrollWidth - carousel.clientWidth;
+        // Hide left button at start, else show
+        leftBtn.style.display = carousel.scrollLeft <= 0 ? 'none' : 'flex';
+        // Hide right button at end, else show
+        rightBtn.style.display = carousel.scrollLeft >= maxScroll ? 'none' : 'flex';
+    }
+
+    updateButtons();
+
+    window.scrollProjects = function(direction) {
+        const slide = document.querySelector('.project');
+        const slideWidth = slide.offsetWidth + 32; // gap
+
+        const maxScroll = carousel.scrollWidth - carousel.clientWidth;
+        let newScroll = carousel.scrollLeft + direction * slideWidth;
+
+        // Clamp scroll position between 0 and maxScroll
+        newScroll = Math.max(0, Math.min(newScroll, maxScroll));
+
+        carousel.scrollTo({
+        left: newScroll,
+        behavior: 'smooth'
+        });
+
+        setTimeout(updateButtons, 300);
+    };
+    };
+
+    </script>
+
+   
+
 </body>
 </html>

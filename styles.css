@@ -27,7 +27,7 @@ body {
 }
 
 a {
-    color: var(---color);
+    color: var(--link-color);
     text-decoration: none;
 }
 
@@ -238,29 +238,43 @@ nav .right a:last-child:hover {
 }
 
 .projects {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    justify-content: left;
-    margin-top: 50px;
+  display: flex;
+  gap: 2rem;
+  width: max-content;
+  transition: transform 0.5s ease;
+  padding: 1rem;
+  margin-top: 50px;
 }
 
-
-.projects .project,
-.projects .umg-project,
-.projects .football-project {
+.projects .project {
     flex: 1 1 300px;
     max-width: 350px;
     background: #fff;
     border-radius: 12px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.07);
-    padding: 1.5rem;                 /* more room */
+    padding: 1rem;
+    text-align: left;
+    align-items: center; /* Centers items vertically */
+    justify-content: center; /* Centers items horizontally */
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    min-height: 420px;              /* ensures enough height */
-    box-sizing: border-box;
+    align-items: flex-start; /* Aligns text to the left */
+
+}
+
+.projects .project {
+    flex: 1 1 300px;
+    max-width: 350px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    padding: 1rem;
+    text-align: left;
+    align-items: center; /* Centers items vertically */
+    justify-content: center; /* Centers items horizontally */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Aligns text to the left */
 }
 
 .projects .project h3 {
@@ -271,24 +285,29 @@ nav .right a:last-child:hover {
     background-color:  #eab997;
 }
 
-.project-desc p {
-    margin: 0;
-    line-height: 1.5;
-    font-size: 0.95rem;
-    color: #333;
-}
-
-.projects .project img,
-.projects .umg-project img,
-.projects .football-project img {
+.projects .project img {
     display: block;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto; /* Centers image horizontally */
     max-width: 100%;
-    max-height: 180px;     /* reduce size */
-    object-fit: contain;   /* maintain aspect ratio */
-    margin-bottom: 1rem;   /* space below image */
+    height: 45%;
 }
 
+
+.projects .umg-project {
+    flex: 1 1 300px;
+    max-width: 350px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    padding: 1rem;
+    text-align: left;
+    align-items: center; /* Centers items vertically */
+    justify-content: center; /* Centers items horizontally */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Aligns text to the left */
+}
 
 .projects .umg-project h3 {
     text-align: center;
@@ -298,8 +317,29 @@ nav .right a:last-child:hover {
     background-color: lightblue;
 }
 
+.projects .umg-project img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto; /* Centers image horizontally */
+    max-width: 100%;
+    height: 50%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
 
-
+.projects .football-project {
+    flex: 1 1 300px;
+    max-width: 350px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    padding: 1rem;
+    text-align: left;
+    justify-content: center; /* Centers items horizontally */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Aligns text to the left */
+}
 
 .projects .football-project h3 {
     text-align: center;
@@ -309,9 +349,76 @@ nav .right a:last-child:hover {
     background-color: rgb(219, 170, 219);
 }
 
+.projects .football-project img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto; /* Centers image horizontally */
+    max-width: 60%;
+    height: 30%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
 
+.projects .football-project {
+    flex: 1 1 300px;
+    max-width: 350px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    padding: 1rem;
+    text-align: left;
+    justify-content: center; /* Centers items horizontally */
 
-.projects .foots-project,
+    flex-direction: column;
+    align-items: flex-start; /* Aligns text to the left */
+}
+
+/* 4th project*/
+.projects .foots-project {
+    flex: 1 1 300px;
+    max-width: 350px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    padding: 1rem;
+    text-align: left;
+    justify-content: center; /* Centers items horizontally */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Aligns text to the left */
+}
+
+.projects .foots-project h3 {
+    text-align: center;
+    width: 100%; /* Ensures the h3 takes up the full width */
+    display: block; /* Ensures it's behaving as a block-level element */
+    margin-bottom: 20px;
+    background-color: rgb(219, 170, 219);
+}
+
+.projects .foots-project img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto; /* Centers image horizontally */
+    max-width: 60%;
+    height: 30%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.projects .foots-project {
+    flex: 1 1 300px;
+    max-width: 350px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    padding: 1rem;
+    text-align: left;
+    justify-content: center; /* Centers items horizontally */
+    flex-direction: column;
+    align-items: flex-start; /* Aligns text to the left */
+}
+/* 5th project */
 .projects .foot-project {
     flex: 1 1 300px;
     max-width: 350px;
@@ -321,14 +428,49 @@ nav .right a:last-child:hover {
     padding: 1rem;
     text-align: left;
     justify-content: center; /* Centers items horizontally */
-    display: none;
+    display: flex;
     flex-direction: column;
     align-items: flex-start; /* Aligns text to the left */
 }
 
+.projects .foot-project h3 {
+    text-align: center;
+    width: 100%; /* Ensures the h3 takes up the full width */
+    display: block; /* Ensures it's behaving as a block-level element */
+    margin-bottom: 20px;
+    background-color: rgb(219, 170, 219);
+}
+
+.projects .foot-project img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto; /* Centers image horizontally */
+    max-width: 60%;
+    height: 30%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.projects .foot-project {
+    flex: 1 1 300px;
+    max-width: 350px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    padding: 1rem;
+    text-align: left;
+    justify-content: center; /* Centers items horizontally */
+
+    flex-direction: column;
+    align-items: flex-start; /* Aligns text to the left */
+}
+
+/* Project hovering and imaging */
 .projects .project img,
 .projects .umg-project img,
-.projects .football-project img {
+.projects .football-project img,
+.projects .foots-project img,
+.projects .foot-project img {
     min-height: 200px; /* standardize image space */
     object-fit: contain; /* keeps aspect ratio */
 }
@@ -347,54 +489,80 @@ nav .right a:last-child:hover {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 1);
 }
 
+.projects .foots-project:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 1);
+}
+
+.projects .foot-project:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 1);
+}
 
 /* PROJECTS CAROUSEL */ 
 .carousel-wrapper {
   position: relative;
   overflow: hidden;
+  align-content: center;
   width: 100%;
 }
 
+/* Carousel container: show 3 projects width */
 .projects-carousel {
+  width: calc(3 * 350px + 3.75 * 2rem); /* 3 projects (350px max-width each) + gaps + padding */
+  max-width: 100%;
   overflow-x: auto;
   scroll-behavior: smooth;
-  /* Hide scrollbar - cross browser */
+  margin: 0 auto; /* center horizontally */
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none;  /* IE 10+ */
+  position: relative;
+  padding: 1rem 2rem;
 }
 
+/* Hide scrollbar for Webkit browsers */
 .projects-carousel::-webkit-scrollbar {
-  display: none; /* Safari & Chrome */
+  display: none;
 }
-
 
 .projects {
   display: flex;
   gap: 2rem;
-  padding: 0 2rem;
   width: max-content;
+  scroll-behavior: smooth;
+  padding: 0;
+  margin-top: 50px;
 }
 
+/* Carousel buttons styling (optional, adjust as needed) */
 .carousel-btn {
+  font-size: 1rem; 
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  z-index: 1;
-  background-color: rgba(0,0,0,0.5);
+  z-index: 10;
+  background-color: rgba(230, 73, 0, 0.811);
   color: white;
-  font-size: 2rem;
   border: none;
   cursor: pointer;
-  padding: 10px;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
 }
 
 .carousel-btn.left {
-  left: 0;
+  left: 5px;
 }
 
 .carousel-btn.right {
-  right: 0;
+  right: 5px;
 }
+
 
 /* Section 4: Contact */
 .contact-section {
