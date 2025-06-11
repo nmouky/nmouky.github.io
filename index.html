@@ -69,9 +69,7 @@
     <!-- SECTION 2: Skills -->
     <section id="skills" class="skills-section">
         <h2>Skills🏄</h2>
-        <div class="text">Lorem ipsum dolor sit amet, 
-            consectetur adipisicing elit. Odit ex eveniet 
-            illo voluptatum, consectetur totam autem! 
+        <div class="text"> Some of the skills that I've acquired over the years
         </div>
         <div class="cells">
             <a href="https://azure.microsoft.com/" target="_blank" rel="noopener noreferrer">
@@ -117,6 +115,7 @@
     <!-- SECTION 3: Projects -->
     <section id="projects" class="projects-section">
     <h2>Projects🏗️</h2>
+    <p class="section-subtitle">Flavour of projects that I've worked on.</p>
     <div class="carousel-wrapper">
         <button class="carousel-btn left" onclick="scrollProjects(-1)">&#10094;</button>
 
@@ -127,7 +126,10 @@
             <img src="Images/Finance Dashboard.png" alt="Dashboard">
             <div class="project-desc">
                 <h4>Insights Dashboard</h4>
-                <p>Developed a dashboard using Python, Dash, and Plotly. dsfzfcadefacxzcAS</p>
+                <p>Provided enhanced insights to management.
+                    Data ETL'd using Azure Databricks and visualised
+                    in PowerBI.
+                </p>
             </div>
             </div>
             <div class="umg-project">
@@ -135,7 +137,8 @@
             <img src="Images/umg.jpg" alt="Model">
             <div class="project-desc">
                 <h4>Predictive Model</h4>
-                <p>Built a model to forecast churn with scikit-learn...</p>
+                <p>Using clustering techniques on unstructured streaming data.
+                    Enabling music executives to hone in on new talent.  </p>
             </div>
             </div>
             <div class="football-project">
@@ -143,23 +146,30 @@
             <img src="Images/football.png" alt="Analytics">
             <div class="project-desc">
                 <h4>Insights Dashboard</h4>
-                <p>Scraped player data and built an insurance model...</p>
+                <p>Scraped football player data and built an insurance model
+                    that prices premiums based on player's injury history.
+                </p>
             </div>
             </div>
-            <div class="foots-project">
-            <h3>Hybrid</h3>
-            <img src="Images/football.png" alt="Analytics">
+            <div class="nlp-project">
+            <h3>Machine Learning</h3>
+            <img src="Images/mj.png" alt="Analytics">
             <div class="project-desc">
-                <h4>Insights Dashboard</h4>
-                <p>Another project with Transfermarkt data.</p>
+                <h4>Sentiment Analysis</h4>
+                <p>Analysing the king of pop's discography using nlp.
+                    Investigating what words evoked certain feelings.
+                </p>
             </div>
             </div>
-            <div class="foot-project">
-            <h3>Hybrid</h3>
-            <img src="Images/football.png" alt="Analytics">
+            <div class="db-project">
+            <h3>Data Engineering</h3>
+            <img src="Images/Capital_Markets_DataFlow.png" alt="Analytics">
             <div class="project-desc">
-                <h4>Insights Dashboard</h4>
-                <p>Another project with Transfermarkt data.</p>
+                <h4>ETL: Sharepoint to Databricks</h4>
+                <p>Ingesting data from curated SharePoint sites.
+                    Marrying up sources of data in Databricks
+                    using the medallion architecture.
+                </p>
             </div>
             </div>
         </div>
@@ -192,11 +202,12 @@
         </div>
     </section>
     </main>
-
+    <!-- JavaScript -->
     <script>
     let scrollIndex = 0;
 
     window.onload = () => {
+    
     const carousel = document.querySelector('.projects-carousel');
     const leftBtn = document.querySelector('.carousel-btn.left');
     const rightBtn = document.querySelector('.carousel-btn.right');
@@ -218,7 +229,7 @@
 
     window.scrollProjects = function(direction) {
         const slide = document.querySelector('.project');
-        const slideWidth = slide.offsetWidth + 32; // gap
+        const slideWidth = slide.offsetWidth + 40; // gap
 
         const maxScroll = carousel.scrollWidth - carousel.clientWidth;
         let newScroll = carousel.scrollLeft + direction * slideWidth;
