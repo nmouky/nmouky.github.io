@@ -533,7 +533,7 @@ nav .right a:last-child:hover {
   overflow-x: auto;
   scroll-behavior: smooth;
   margin: 0 auto; /* center horizontally */
-  scrollbar-width: none; /* Firefox */
+  /* scrollbar-width: none; Firefox */
   -ms-overflow-style: none;  /* IE 10+ */
   position: relative;
   padding: 1rem 2rem;
@@ -571,7 +571,7 @@ nav .right a:last-child:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  user-select: none;
+  /* user-select: none; */
 }
 
 .carousel-btn.left {
