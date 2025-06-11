@@ -599,7 +599,8 @@ nav .right a:last-child:hover {
 }
 
 .contact-section .group .text {
-    font-size:20px ;
+    font-size:20px;
+    font-family: 'Times New Roman', Times, serif;
     flex:1;
     margin-top: 20px;
 }
