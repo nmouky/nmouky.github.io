@@ -17,6 +17,7 @@
 
 html {
     scroll-behavior:smooth;
+    scroll-padding-top: 120px;
 }
 
 
@@ -154,8 +155,8 @@ nav .right a:last-child:hover {
 /*SECTION 2: Skills */
 .skills-section{
     padding: 0 20px;
-    margin-bottom: 100px;
-    margin-top: 200px;
+    margin-bottom: 150px;
+    margin-top: 150px;
     
 }
 
@@ -237,8 +238,8 @@ nav .right a:last-child:hover {
 /* Section 3: Projects */
 .projects-section {
     padding: 0 160px;
-    margin-top:200px;
-    margin-bottom:00px;
+    margin-top:150px;
+    margin-bottom:0px;
 }
 
 .projects-section h2{
