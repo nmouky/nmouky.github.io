@@ -718,11 +718,11 @@ nav .right a:last-child:hover {
     }
 
      nav .left a{
-        font-size:30px;
+        font-size:16px;
     }
 
     nav .right a {
-        font-size:30px;
+        font-size:16px;
         padding: 10px;
     }
 
