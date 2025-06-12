@@ -851,3 +851,144 @@ nav .right a:last-child:hover {
         padding: 0 20px;
     }
 }
+
+@media (max-width:400px) {
+    /*NAVBAR*/
+    nav {
+        padding: 0 10px;
+    }
+
+     nav .left a{
+        font-size:30px;
+    }
+
+    nav .right a {
+        font-size:30px;
+        padding: 10px;
+    }
+
+    nav .right a span { 
+        display:none;
+    }
+
+    nav .right a:last-child {
+        color: whitesmoke;
+        background-color: transparent;
+        padding: 10px;
+    }
+
+    /* Section 1: Hero */
+
+    .hero-section {
+        padding: 0 20px;
+    }
+    
+    .hero-section .text h2 {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin-left: auto;
+        font-size: 30px;
+        padding: 0px 0px;
+    }
+
+    .hero-section .headshot img {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        display:flex;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .hero-section .links a {
+        font-size:14px;
+        display: flex;
+        flex-direction: column; /* stacks icon over text */
+        align-items: center;     /* centers horizontally */
+        justify-content: center; /* centers vertically if needed */
+        text-align: center;       /* optional spacing */
+        text-decoration: none;   /* optional: remove underline */       /* keep text color consistent */
+    }
+    
+    /* Section 2: Skills */
+    .skills-section {
+        padding: 0 20px;
+    }
+
+    .skills-section .cells .cell span {
+        font-size:12px;
+    } 
+     /* Section 3: Projects */
+    .projects-section {
+        padding: 0 10px;
+        }
+
+    .projects-section h2 {
+        font-size: 30px;
+        text-align: center;
+        }
+
+    .projects-section .section-subtitle {
+        font-size: 20px;
+        text-align: center;
+        margin-bottom: 5px;
+        }
+
+    .carousel-wrapper {
+        position: relative;
+        overflow: hidden;
+        }
+
+    .projects-carousel {
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        display:flexbox;
+        gap: 20px;
+        scroll-behavior: smooth;
+        padding-bottom: 10px;
+        }
+
+    .projects {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        }
+
+    .project,
+    .umg-project,
+    .football-project,
+    .nlp-project,
+    .db-project {
+        flex: 0 0 80%;
+        max-width: 80%;
+        scroll-snap-align: start;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        overflow: hidden;
+        background-color: white;
+        }
+
+    .project img,
+    .umg-project img,
+    .football-project img,
+    .nlp-project img,
+    .db-project img {
+        width: 100%;
+        height: auto;
+        }
+
+    .carousel-btn {
+        display: none !important;
+        }
+
+    .project-desc h4 {
+        font-size: 16px;
+        }
+
+    .project-desc p {
+        font-size: 14px;
+        }
+    /* Section 4: Contact */
+    .contact-section {
+        padding: 0 20px;
+    }
+}
