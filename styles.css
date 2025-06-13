@@ -4,6 +4,9 @@
     --icon-color: black;
     --link-color: #4a76ee;
     --background-color: whitesmoke;
+    --dataengineering-color:#eab997;
+    --machinelearning-color:lightblue;
+    --hybrid-color:rgb(219, 170, 219);
 }
 
 * {
@@ -14,6 +17,7 @@
 
 html {
     scroll-behavior:smooth;
+    scroll-padding-top: 120px;
 }
 
 
@@ -94,6 +98,7 @@ nav .right a:last-child:hover {
     padding-left: 200px;
     padding-right: 100px;
     margin: 50px 0;
+    margin-top: 100px;
     margin-bottom: 100px;
     gap: 40px;
 }
@@ -150,17 +155,21 @@ nav .right a:last-child:hover {
 /*SECTION 2: Skills */
 .skills-section{
     padding: 0 20px;
-    margin-bottom: 100px;
+    margin-bottom: 150px;
+    margin-top: 150px;
+    
 }
 
 .skills-section h2 {
     text-align: center;
-    font-size: 35px;
+    font-size: 40px;
 }
 
 .skills-section .text {
+    font-family: 'Times New Roman', Times, serif;
+    align-content: center;
     text-align: center;
-    font-size: 14px;
+    font-size: 30px;
     margin-top: 10px;
     margin-bottom: 20px;
 }
@@ -184,7 +193,7 @@ nav .right a:last-child:hover {
 }
 
 .skills-section .cells .cell span {
-    font-size: 10px;
+    font-size: 12px;
 }
 
 .skills-section .cells .cell img {
@@ -229,12 +238,22 @@ nav .right a:last-child:hover {
 /* Section 3: Projects */
 .projects-section {
     padding: 0 160px;
-    margin-bottom:100px;
+    margin-top:150px;
+    margin-bottom:0px;
 }
 
 .projects-section h2{
-    font-size: 35px;
+    font-size: 40px;
     text-align: center;
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+
+.section-subtitle {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 30px;
+  text-align: center;
+  align-content: center;
 }
 
 .projects {
@@ -282,7 +301,7 @@ nav .right a:last-child:hover {
     width: 100%; /* Ensures the h3 takes up the full width */
     display: block; /* Ensures it's behaving as a block-level element */
     margin-bottom: 20px;
-    background-color:  #eab997;
+    background-color:  var(--dataengineering-color);
 }
 
 .projects .project img {
@@ -314,7 +333,7 @@ nav .right a:last-child:hover {
     width: 100%; /* Ensures the h3 takes up the full width */
     display: block; /* Ensures it's behaving as a block-level element */
     margin-bottom: 20px;
-    background-color: lightblue;
+    background-color:var(--machinelearning-color);
 }
 
 .projects .umg-project img {
@@ -346,7 +365,7 @@ nav .right a:last-child:hover {
     width: 100%; /* Ensures the h3 takes up the full width */
     display: block; /* Ensures it's behaving as a block-level element */
     margin-bottom: 20px;
-    background-color: rgb(219, 170, 219);
+    background-color: var(--hybrid-color);
 }
 
 .projects .football-project img {
@@ -374,7 +393,7 @@ nav .right a:last-child:hover {
 }
 
 /* 4th project*/
-.projects .foots-project {
+.projects .nlp-project {
     flex: 1 1 300px;
     max-width: 350px;
     background: #fff;
@@ -388,15 +407,15 @@ nav .right a:last-child:hover {
     align-items: flex-start; /* Aligns text to the left */
 }
 
-.projects .foots-project h3 {
+.projects .nlp-project h3 {
     text-align: center;
     width: 100%; /* Ensures the h3 takes up the full width */
     display: block; /* Ensures it's behaving as a block-level element */
     margin-bottom: 20px;
-    background-color: rgb(219, 170, 219);
+    background-color: var(--machinelearning-color);
 }
 
-.projects .foots-project img {
+.projects .nlp-project img {
     display: block;
     margin-left: auto;
     margin-right: auto; /* Centers image horizontally */
@@ -406,7 +425,7 @@ nav .right a:last-child:hover {
     margin-bottom: 10px;
 }
 
-.projects .foots-project {
+.projects .nlp-project {
     flex: 1 1 300px;
     max-width: 350px;
     background: #fff;
@@ -419,7 +438,7 @@ nav .right a:last-child:hover {
     align-items: flex-start; /* Aligns text to the left */
 }
 /* 5th project */
-.projects .foot-project {
+.projects .db-project {
     flex: 1 1 300px;
     max-width: 350px;
     background: #fff;
@@ -433,15 +452,15 @@ nav .right a:last-child:hover {
     align-items: flex-start; /* Aligns text to the left */
 }
 
-.projects .foot-project h3 {
+.projects .db-project h3 {
     text-align: center;
     width: 100%; /* Ensures the h3 takes up the full width */
     display: block; /* Ensures it's behaving as a block-level element */
     margin-bottom: 20px;
-    background-color: rgb(219, 170, 219);
+    background-color: var(--dataengineering-color);
 }
 
-.projects .foot-project img {
+.projects .db-project img {
     display: block;
     margin-left: auto;
     margin-right: auto; /* Centers image horizontally */
@@ -451,7 +470,7 @@ nav .right a:last-child:hover {
     margin-bottom: 10px;
 }
 
-.projects .foot-project {
+.projects .db-project {
     flex: 1 1 300px;
     max-width: 350px;
     background: #fff;
@@ -469,8 +488,8 @@ nav .right a:last-child:hover {
 .projects .project img,
 .projects .umg-project img,
 .projects .football-project img,
-.projects .foots-project img,
-.projects .foot-project img {
+.projects .nlp-project img,
+.projects .db-project img {
     min-height: 200px; /* standardize image space */
     object-fit: contain; /* keeps aspect ratio */
 }
@@ -489,12 +508,12 @@ nav .right a:last-child:hover {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 1);
 }
 
-.projects .foots-project:hover {
+.projects .nlp-project:hover {
     transform: translateY(-10px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 1);
 }
 
-.projects .foot-project:hover {
+.projects .db-project:hover {
     transform: translateY(-10px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 1);
 }
@@ -514,7 +533,7 @@ nav .right a:last-child:hover {
   overflow-x: auto;
   scroll-behavior: smooth;
   margin: 0 auto; /* center horizontally */
-  scrollbar-width: none; /* Firefox */
+  /* scrollbar-width: none; Firefox */
   -ms-overflow-style: none;  /* IE 10+ */
   position: relative;
   padding: 1rem 2rem;
@@ -552,7 +571,7 @@ nav .right a:last-child:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  user-select: none;
+  /* user-select: none; */
 }
 
 .carousel-btn.left {
@@ -567,7 +586,8 @@ nav .right a:last-child:hover {
 /* Section 4: Contact */
 .contact-section {
     padding: 0 160px;
-    margin-bottom:100px;
+    margin-top:200px;
+    margin-bottom:200px;
 }
 
 .contact-section h2 {
@@ -580,7 +600,8 @@ nav .right a:last-child:hover {
 }
 
 .contact-section .group .text {
-    font-size:20px ;
+    font-size:20px;
+    font-family: 'Times New Roman', Times, serif;
     flex:1;
     margin-top: 20px;
 }
@@ -697,11 +718,11 @@ nav .right a:last-child:hover {
     }
 
      nav .left a{
-        font-size:30px;
+        font-size:16px;
     }
 
     nav .right a {
-        font-size:30px;
+        font-size:16px;
         padding: 10px;
     }
 
@@ -753,9 +774,219 @@ nav .right a:last-child:hover {
     }
 
     .skills-section .cells .cell span {
-        font-size:16px;
+        font-size:12px;
     } 
+     /* Section 3: Projects */
+    .projects-section {
+        padding: 0 10px;
+        }
+
+    .projects-section h2 {
+        font-size: 30px;
+        text-align: center;
+        }
+
+    .projects-section .section-subtitle {
+        font-size: 20px;
+        text-align: center;
+        margin-bottom: 5px;
+        }
+
+    .carousel-wrapper {
+        position: relative;
+        overflow: hidden;
+        }
+
+    .projects-carousel {
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        display:flexbox;
+        gap: 20px;
+        scroll-behavior: smooth;
+        padding-bottom: 10px;
+        }
+
+    .projects {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        }
+
+    .project,
+    .umg-project,
+    .football-project,
+    .nlp-project,
+    .db-project {
+        flex: 0 0 80%;
+        max-width: 80%;
+        scroll-snap-align: start;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        overflow: hidden;
+        background-color: white;
+        }
+
+    .project img,
+    .umg-project img,
+    .football-project img,
+    .nlp-project img,
+    .db-project img {
+        width: 100%;
+        height: auto;
+        }
+
+    .carousel-btn {
+        display: none !important;
+        }
+
+    .project-desc h4 {
+        font-size: 16px;
+        }
+
+    .project-desc p {
+        font-size: 14px;
+        }
+    /* Section 4: Contact */
+    .contact-section {
+        padding: 0 20px;
+    }
+}
+
+@media (max-width:400px) {
+    /*NAVBAR*/
+    nav {
+        padding: 0 10px;
+    }
+
+     nav .left a{
+        font-size:20px;
+    }
+
+    nav .right a {
+        font-size:20px;
+        padding: 10px;
+    }
+
+    nav .right a span { 
+        display:none;
+    }
+
+    nav .right a:last-child {
+        color: whitesmoke;
+        background-color: transparent;
+        padding: 10px;
+    }
+
+    /* Section 1: Hero */
+
+    .hero-section {
+        padding: 0 20px;
+    }
     
+    .hero-section .text h2 {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin-left: auto;
+        font-size: 30px;
+        padding: 0px 0px;
+    }
+
+    .hero-section .headshot img {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        display:flex;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .hero-section .links a {
+        font-size:14px;
+        display: flex;
+        flex-direction: column; /* stacks icon over text */
+        align-items: center;     /* centers horizontally */
+        justify-content: center; /* centers vertically if needed */
+        text-align: center;       /* optional spacing */
+        text-decoration: none;   /* optional: remove underline */       /* keep text color consistent */
+    }
+    
+    /* Section 2: Skills */
+    .skills-section {
+        padding: 0 20px;
+    }
+
+    .skills-section .cells .cell span {
+        font-size:12px;
+    } 
+     /* Section 3: Projects */
+    .projects-section {
+        padding: 0 10px;
+        }
+
+    .projects-section h2 {
+        font-size: 30px;
+        text-align: center;
+        }
+
+    .projects-section .section-subtitle {
+        font-size: 20px;
+        text-align: center;
+        margin-bottom: 5px;
+        }
+
+    .carousel-wrapper {
+        position: relative;
+        overflow: hidden;
+        }
+
+    .projects-carousel {
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        display:flexbox;
+        gap: 20px;
+        scroll-behavior: smooth;
+        padding-bottom: 10px;
+        }
+
+    .projects {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        }
+
+    .project,
+    .umg-project,
+    .football-project,
+    .nlp-project,
+    .db-project {
+        flex: 0 0 80%;
+        max-width: 80%;
+        scroll-snap-align: start;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        overflow: hidden;
+        background-color: white;
+        }
+
+    .project img,
+    .umg-project img,
+    .football-project img,
+    .nlp-project img,
+    .db-project img {
+        width: 100%;
+        height: auto;
+        }
+
+    .carousel-btn {
+        display: none !important;
+        }
+
+    .project-desc h4 {
+        font-size: 16px;
+        }
+
+    .project-desc p {
+        font-size: 14px;
+        }
     /* Section 4: Contact */
     .contact-section {
         padding: 0 20px;
