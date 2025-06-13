@@ -753,6 +753,7 @@ nav .right a:last-child:hover {
     }
 
     .hero-section .headshot img {
+        height:auto;
         margin-top: 10px;
         margin-bottom: 10px;
         display:flex;
