@@ -122,6 +122,7 @@ nav .right a:last-child:hover {
     display: flex;
     justify-content: right;
     width: 300px;
+    /* max-width: 500px; */
     
 }
 
@@ -666,6 +667,16 @@ nav .right a:last-child:hover {
     .hero-section .text h2 {
         font-size: 35px;
     }
+
+    .hero-section .headshot img {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        width: 80%; /* or try something like 200px if you prefer fixed */
+        max-width: 300px; /* prevent stretching larger than intended */
+        display:flexbox;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 @media  (max-width: 740px) {
@@ -683,12 +694,12 @@ nav .right a:last-child:hover {
     }
 
     .hero-section .headshot img {
+        width: 80%; /* or try something like 200px if you prefer fixed */
+        max-width: 300px; /* prevent stretching larger than intended */
         margin-top: 10px;
         margin-bottom: 10px;
-        display:flex;
-        margin-left: auto;
-        margin-right: auto;
     }
+   
     
     .hero-section .text h2 {
         display: flex;
@@ -754,9 +765,11 @@ nav .right a:last-child:hover {
 
     .hero-section .headshot img {
         height:300px;
+        width: 60%; /* or try something like 200px if you prefer fixed */
+        max-width: 300px; /* prevent stretching larger than intended */
         margin-top: 10px;
         margin-bottom: 10px;
-        display:flex;
+        display:flexbox;
         margin-left: auto;
         margin-right: auto;
     }
