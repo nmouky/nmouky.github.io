@@ -122,8 +122,7 @@ nav .right a:last-child:hover {
     display: flex;
     justify-content: right;
     width: 300px;
-    /* max-width: 500px; */
-    
+    min-width: 300px; 
 }
 
 .hero-section .headshot img {
