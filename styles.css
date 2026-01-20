@@ -1,5 +1,5 @@
-
 :root {
+    /*--text-color: #1a1c20;*/
     --text-color: black;
     --icon-color: black;
     --link-color: #4a76ee;
@@ -12,20 +12,22 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing:border-box;
 }
 
 html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 90px;
+    scroll-behavior:smooth;
+    scroll-padding-top: 120px;
 }
+
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: var(--background-color);
+    text-align: left;
+    background-color:var(--background-color);
     color: var(--text-color);
+    margin: 0;
     max-width: 2550px;
-    margin: 0 auto;
 }
 
 a {
@@ -35,253 +37,988 @@ a {
 
 /* NAVBAR */
 nav {
-    background-color: black;
-    height: 70px;
+    background-color: black; /* change to your desired color */
+    height: 80px; /* adjust height as needed */
     width: 100%;
-    position: fixed;
-    top: 0;
+    position: fixed; /* or fixed if you want it to stay on top during scroll */
     z-index: 1000;
+}
+nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 120px;
+    padding: 0 150px;
+    position:sticky;
+    z-index: 1000;
+    top:0 ;
 }
 
 nav .left a {
-    color: whitesmoke;
-    font-size: 30px;
+    color:whitesmoke;
+    font-size: 35px;
     font-weight: 600;
 }
 
 nav .right a {
-    color: whitesmoke;
-    font-size: 20px;
-    padding: 5px 12px;
+    color:whitesmoke;
+    font-size: 22px;
+    padding: 5px 15px;
+    margin: 5 10px;
 }
 
 nav .right a:last-child {
+    color:black;
     background-color: whitesmoke;
-    color: black;
+    padding: 5px 10px;
     border-radius: 5px;
 }
 
-nav .right a:hover {
-    color: var(--link-color);
+nav .right a span {
+    margin-left:5px;
 }
 
-/* HERO */
+nav .right  a:hover {
+    color: var(--link-color);
+    
+}
+
+nav .right a:last-child:hover {
+    color:var(--background-color);
+    background-color: var(--link-color);
+    padding: 5px 5px;
+    border-radius: 5px;
+}
+
+/* SECTION 1: Hero */
 .hero-section {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 80px 150px 40px 150px;
-    margin-top: 50px;
+    padding-left: 200px;
+    padding-right: 100px;
+    margin: 50px 0;
+    margin-top: 100px;
+    margin-bottom: 100px;
     gap: 40px;
 }
 
-.hero-section .text h2 {
-    font-size: 42px;
-    margin-bottom: 20px;
+.hero-section .text {
+    flex: 3;
 }
 
-.hero-section .text p {
-    margin-top: 20px;
+
+.hero-section .text h2 {
+    font-size: 50px;
+}
+
+.hero-section .text p{
+    margin-top: 40px;
+}
+
+
+.hero-section .headshot {
+    flex: 2;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 300px;
+    max-width: 100%;
 }
 
 .hero-section .headshot img {
-    width: 260px;
-    height: 260px;
+    width: 300px;
+    height: 300px;
     object-fit: cover;
     border-radius: 50%;
+    margin-right: 100px;
+    display: block;
 }
 
-/* LINKS */
+
 .hero-section .links {
-    margin-top: 20px;
+    margin-top: 25px;
 }
 
 .hero-section .links a {
-    padding: 4px 8px;
+    display: inline-block;
+    padding: 5px 10px;
     border: 2px solid var(--icon-color);
     border-radius: 5px;
-    margin-right: 8px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    transition: .1s;
 }
 
-/* SKILLS */
-.skills-section {
-    padding: 40px 20px;
-    margin-bottom: 80px;
+.hero-section .links a:hover {
+    color: var(--link-color);
+    border: 2px solid rgb(168, 62, 5);
+}
+
+/*SECTION 2: Skills */
+.skills-section{
+    padding: 0 20px;
+    margin-bottom: 150px;
+    margin-top: 150px;
+    
 }
 
 .skills-section h2 {
     text-align: center;
-    font-size: 34px;
-    margin-bottom: 10px;
+    font-size: 40px;
 }
 
 .skills-section .text {
+    font-family: 'Times New Roman', Times, serif;
+    align-content: center;
     text-align: center;
-    font-size: 26px;
+    font-size: 30px;
+    margin-top: 10px;
     margin-bottom: 20px;
 }
 
 .skills-section .cells {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-    gap: 8px;
+    flex-wrap:wrap;
 }
 
 .skills-section .cells .cell {
     display: flex;
+    justify-content: center;
     align-items: center;
-    width: 130px;
-    padding: 5px;
+    width: 150px;
+    padding: 0px 5px;
+    margin: 5px;
     border: 2px solid;
-    border-radius: 8px;
-    gap: 5px;
+    border-radius: 10px;
+
 }
 
-/* PROJECTS */
-.projects-section {
-    padding: 40px 120px;
-    margin-bottom: 80px;
+.skills-section .cells .cell span {
+    font-size: 12px;
 }
 
-.projects-section h2 {
-    text-align: center;
-    font-size: 36px;
+.skills-section .cells .cell img {
+    width:30px;
+    height:30px;
+    object-fit: contain;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.skills-section .cells a {
+    padding: 0px px;
+    border-radius: 5px;
+    margin-right: 5px;
     margin-bottom: 10px;
+    transition: .1s;
+}
+.skills-section .cells a .cell:hover {
+    color: var(--link-color);
+    border: 2px solid rgb(168, 62, 5);
 }
 
-.section-subtitle {
-    text-align: center;
-    font-size: 24px;
+.skills-section .cells .python-cell{
+    position:relative;
 }
 
-/* Carousel */
-.carousel-wrapper {
-    width: 100%;
-    position: relative;
-    overflow: hidden;
+.skills-section .cells .python-cell .hover-gif {
+    position:relative;
+    display: none;
+    z-index: 1;
+    border-radius: 5px;
 }
 
-.projects-carousel {
-    padding: 0.5rem 1rem;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    max-width: 100%;
-}
-
-.projects-carousel::-webkit-scrollbar {
+.skills-section .cells .python-cell:hover .static-img {
     display: none;
 }
 
-.projects {
-    display: flex;
-    gap: 1.5rem;
-    padding: 20px 0;
+.skills-section .cells .python-cell:hover .hover-gif {
+    display:flex;
 }
 
-/* Individual Card */
-.project, .umg-project, .football-project, .nlp-project, .db-project {
+/* Section 3: Projects */
+.projects-section {
+    padding: 0 160px;
+    margin-top:150px;
+    margin-bottom:0px;
+}
+
+.projects-section h2{
+    font-size: 40px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+
+.section-subtitle {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 30px;
+  text-align: center;
+  align-content: center;
+}
+
+.projects {
+  display: flex;
+  gap: 2rem;
+  width: max-content;
+  transition: transform 0.5s ease;
+  padding: 1rem;
+  margin-top: 50px;
+}
+
+.projects .project {
     flex: 1 1 300px;
-    max-width: 330px;
-    background: white;
-    border-radius: 10px;
-    padding: 12px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    max-width: 350px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    padding: 1rem;
+    text-align: left;
+    align-items: center; /* Centers items vertically */
+    justify-content: center; /* Centers items horizontally */
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    align-items: flex-start; /* Aligns text to the left */
+
 }
 
-.project:hover,
-.umg-project:hover,
-.football-project:hover,
-.nlp-project:hover,
-.db-project:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
-}
-
-/* HEADERS */
-.project h3 { background: var(--dataengineering-color); }
-.umg-project h3 { background: var(--machinelearning-color); }
-.football-project h3 { background: var(--hybrid-color); }
-.nlp-project h3 { background: var(--machinelearning-color); }
-.db-project h3 { background: var(--dataengineering-color); }
-
-/* IMAGES */
-.project img,
-.umg-project img,
-.football-project img,
-.nlp-project img,
-.db-project img {
-    width: 100%;
-    max-height: 180px;
-    object-fit: contain;
-}
-
-/* Carousel Buttons */
-.carousel-btn {
-    position: absolute;
-    top: 48%;
-    transform: translateY(-50%);
-    width: 38px;
-    height: 38px;
-    background: rgba(230, 73, 0, 0.9);
-    color: white;
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-    z-index: 20;
+.projects .project {
+    flex: 1 1 300px;
+    max-width: 350px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    padding: 1rem;
+    text-align: left;
+    align-items: center; /* Centers items vertically */
+    justify-content: center; /* Centers items horizontally */
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start; /* Aligns text to the left */
 }
 
-.carousel-btn.left { left: 10px; }
-.carousel-btn.right { right: 10px; }
+.projects .project h3 {
+    text-align: center;
+    width: 100%; /* Ensures the h3 takes up the full width */
+    display: block; /* Ensures it's behaving as a block-level element */
+    margin-bottom: 20px;
+    background-color:  var(--dataengineering-color);
+}
 
-/* CONTACT */
+.projects .project img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto; /* Centers image horizontally */
+    max-width: 100%;
+    height: 45%;
+}
+
+
+.projects .umg-project {
+    flex: 1 1 300px;
+    max-width: 350px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    padding: 1rem;
+    text-align: left;
+    align-items: center; /* Centers items vertically */
+    justify-content: center; /* Centers items horizontally */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Aligns text to the left */
+}
+
+.projects .umg-project h3 {
+    text-align: center;
+    width: 100%; /* Ensures the h3 takes up the full width */
+    display: block; /* Ensures it's behaving as a block-level element */
+    margin-bottom: 20px;
+    background-color:var(--machinelearning-color);
+}
+
+.projects .umg-project img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto; /* Centers image horizontally */
+    max-width: 100%;
+    height: 50%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.projects .football-project {
+    flex: 1 1 300px;
+    max-width: 350px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    padding: 1rem;
+    text-align: left;
+    justify-content: center; /* Centers items horizontally */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Aligns text to the left */
+}
+
+.projects .football-project h3 {
+    text-align: center;
+    width: 100%; /* Ensures the h3 takes up the full width */
+    display: block; /* Ensures it's behaving as a block-level element */
+    margin-bottom: 20px;
+    background-color: var(--hybrid-color);
+}
+
+.projects .football-project img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto; /* Centers image horizontally */
+    max-width: 60%;
+    height: 30%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.projects .football-project {
+    flex: 1 1 300px;
+    max-width: 350px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    padding: 1rem;
+    text-align: left;
+    justify-content: center; /* Centers items horizontally */
+
+    flex-direction: column;
+    align-items: flex-start; /* Aligns text to the left */
+}
+
+/* 4th project*/
+.projects .nlp-project {
+    flex: 1 1 300px;
+    max-width: 350px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    padding: 1rem;
+    text-align: left;
+    justify-content: center; /* Centers items horizontally */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Aligns text to the left */
+}
+
+.projects .nlp-project h3 {
+    text-align: center;
+    width: 100%; /* Ensures the h3 takes up the full width */
+    display: block; /* Ensures it's behaving as a block-level element */
+    margin-bottom: 20px;
+    background-color: var(--machinelearning-color);
+}
+
+.projects .nlp-project img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto; /* Centers image horizontally */
+    max-width: 60%;
+    height: 30%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.projects .nlp-project {
+    flex: 1 1 300px;
+    max-width: 350px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    padding: 1rem;
+    text-align: left;
+    justify-content: center; /* Centers items horizontally */
+    flex-direction: column;
+    align-items: flex-start; /* Aligns text to the left */
+}
+/* 5th project */
+.projects .db-project {
+    flex: 1 1 300px;
+    max-width: 350px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    padding: 1rem;
+    text-align: left;
+    justify-content: center; /* Centers items horizontally */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Aligns text to the left */
+}
+
+.projects .db-project h3 {
+    text-align: center;
+    width: 100%; /* Ensures the h3 takes up the full width */
+    display: block; /* Ensures it's behaving as a block-level element */
+    margin-bottom: 20px;
+    background-color: var(--dataengineering-color);
+}
+
+.projects .db-project img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto; /* Centers image horizontally */
+    max-width: 60%;
+    height: 30%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.projects .db-project {
+    flex: 1 1 300px;
+    max-width: 350px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    padding: 1rem;
+    text-align: left;
+    justify-content: center; /* Centers items horizontally */
+
+    flex-direction: column;
+    align-items: flex-start; /* Aligns text to the left */
+}
+
+/* Project hovering and imaging */
+.projects .project img,
+.projects .umg-project img,
+.projects .football-project img,
+.projects .nlp-project img,
+.projects .db-project img {
+    min-height: 200px; /* standardize image space */
+    object-fit: contain; /* keeps aspect ratio */
+}
+.projects .project:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 1);
+}
+
+.projects .umg-project:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 1);
+}
+
+.projects .football-project:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 1);
+}
+
+.projects .nlp-project:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 1);
+}
+
+.projects .db-project:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 1);
+}
+
+/* PROJECTS CAROUSEL */ 
+.carousel-wrapper {
+  position: relative;
+  overflow: hidden;
+  align-content: center;
+  width: 100%;
+}
+
+/* Carousel container: show 3 projects width */
+.projects-carousel {
+  width: calc(3 * 350px + 3.75 * 2rem); /* 3 projects (350px max-width each) + gaps + padding */
+  max-width: 100%;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  margin: 0 auto; /* center horizontally */
+  /* scrollbar-width: none; Firefox */
+  -ms-overflow-style: none;  /* IE 10+ */
+  position: relative;
+  padding: 1rem 2rem;
+}
+
+/* Hide scrollbar for Webkit browsers */
+.projects-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.projects {
+  display: flex;
+  gap: 2rem;
+  width: max-content;
+  scroll-behavior: smooth;
+  padding: 0;
+  margin-top: 50px;
+}
+
+/* Carousel buttons styling (optional, adjust as needed) */
+.carousel-btn {
+  font-size: 1rem; 
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background-color: rgba(230, 73, 0, 0.811);
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* user-select: none; */
+}
+
+.carousel-btn.left {
+  left: 5px;
+}
+
+.carousel-btn.right {
+  right: 5px;
+}
+
+
+/* Section 4: Contact */
 .contact-section {
-    padding: 40px 60px;
-    margin-bottom: 80px;
+    padding: 0 160px;
+    margin-top:200px;
+    margin-bottom:200px;
 }
 
 .contact-section h2 {
-    text-align: center;
-    font-size: 36px;
-    margin-bottom: 20px;
+    font-size:30px;
 }
 
 .contact-section .group {
+    display:flex;
+    gap: 50px;
+}
+
+.contact-section .group .text {
+    font-size:20px;
+    font-family: 'Times New Roman', Times, serif;
+    flex:1;
+    margin-top: 20px;
+}
+
+.contact-section .group form {
+    flex:3;
     display: flex;
-    gap: 40px;
-    padding: 0 60px;
+    flex-direction: column;
+    
 }
 
 .contact-section .group form input,
-.contact-section .group form textarea {
+.contact-section .group form textarea{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     border: 2px solid var(--text-color);
+    background-color:transparent;
     padding: 10px;
-    margin-bottom: 12px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    outline: none;
+    resize:none;
 }
 
-/* RESPONSIVE MEDIA QUERIES */
-@media (max-width: 850px) {
-    nav { padding: 0 20px; }
-    .hero-section { padding: 60px 40px 30px; flex-direction: column-reverse; }
+.contact-section .group form input:focus {
+    border-color: var(--link-color)
 }
 
-@media (max-width: 600px) {
-    nav .left a { font-size: 20px; }
-    .projects-section { padding: 20px; }
-    .projects-carousel { padding: 0.25rem 0.5rem; }
-    .carousel-btn { width: 32px; height: 32px; }
+.contact-section .group form textarea:focus {
+    border-color: var(--link-color)
+}
+.contact-section .group form button {
+    font-size:16px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:#fff;
+    background-color: var(--text-color);
+    border:none;
+    border-radius: 5px;
+    height:50px;
+    cursor:pointer;
+    transition: .1s;
 }
 
-@media (max-width: 400px) {
-    .carousel-btn { display: flex !important; }
+.contact-section .group form button:hover {
+    filter: brightness(.9)
+}
+
+.contact-section .group form button:active {
+    color:#fff;
+    background-color: var(--link-color);
+}
+
+/* Media */
+@media  (max-width: 850px) {
+    /*NAVBAR*/
+    nav {padding: 0 20px;}
+
+    nav .right a {
+        font-size:14px;
+    }
+    /* Section 1: Hero */
+    .hero-section .text h2 {
+        font-size: 35px;
+    }
+
+    .hero-section .headshot img {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        width: 80%; /* or try something like 200px if you prefer fixed */
+        max-width: 300px; /* prevent stretching larger than intended */
+        display:flexbox;
+        height: auto;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        margin-right: 0;
+    }
+}
+    
+
+@media  (max-width: 740px) {
+    /*NAVBAR*/
+    nav {padding: 0px 20px;}
+
+    nav .right a {
+        font-size:14px;
+    }
+    
+    /* Section 1: Hero */
+    .hero-section  {
+        padding: 0 30px;
+        flex-direction: column-reverse;
+    }
+
+    .hero-section .headshot img {
+        width: 80%; /* or try something like 200px if you prefer fixed */
+        max-width: 300px; /* prevent stretching larger than intended */
+        margin-top: 10px;
+        margin-bottom: 10px;
+        height: auto;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        margin-right: 0;
+    }
+   
+    
+    .hero-section .text h2 {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin-left: auto;
+        font-size: 30px;
+        padding: 0px 0px;
+    }
+    /* Section 2: Skills */
+    .skills-section {
+        padding: 0 30px;
+    }
+
+    .skills-section .cells .cell span {
+        font-size:16px;
+    } 
+    /* Section 4: Contact */
+    .contact-section .group {
+        flex-direction:column;
+    }
+}
+
+@media (max-width:600px) {
+    /*NAVBAR*/
+    nav {
+        padding: 0 10px;
+    }
+
+     nav .left a{
+        font-size:16px;
+    }
+
+    nav .right a {
+        font-size:16px;
+        padding: 10px;
+    }
+
+    nav .right a span { 
+        display:none;
+    }
+
+    nav .right a:last-child {
+        color: whitesmoke;
+        background-color: transparent;
+        padding: 10px;
+    }
+
+    /* Section 1: Hero */
+
+    .hero-section {
+        padding: 0 20px;
+    }
+    
+    .hero-section .text h2 {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin-left: auto;
+        font-size: 30px;
+        padding: 0px 0px;
+    }
+
+    .hero-section .headshot img {
+        
+        width: 80%; /* or try something like 200px if you prefer fixed */
+        max-width: 300px; /* prevent stretching larger than intended */
+        margin-top: 10px;
+        margin-bottom: 10px;
+        display:flexbox;
+        margin-left: auto;
+        margin-right: auto;
+        height: auto;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        margin-right: 30px;
+    }
+    .hero-section .links a {
+        font-size:14px;
+        display: flex;
+        flex-direction: column; /* stacks icon over text */
+        align-items: center;     /* centers horizontally */
+        justify-content: center; /* centers vertically if needed */
+        text-align: center;       /* optional spacing */
+        text-decoration: none;   /* optional: remove underline */       /* keep text color consistent */
+    }
+    
+    /* Section 2: Skills */
+    .skills-section {
+        padding: 0 20px;
+    }
+
+    .skills-section .cells .cell span {
+        font-size:12px;
+    } 
+     /* Section 3: Projects */
+    .projects-section {
+        padding: 0 10px;
+        }
+
+    .projects-section h2 {
+        font-size: 30px;
+        text-align: center;
+        }
+
+    .projects-section .section-subtitle {
+        font-size: 20px;
+        text-align: center;
+        margin-bottom: 5px;
+        }
+
+    .carousel-wrapper {
+        position: relative;
+        overflow: hidden;
+        }
+
+    .projects-carousel {
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        display:flexbox;
+        gap: 20px;
+        scroll-behavior: smooth;
+        padding-bottom: 10px;
+        }
+
+    .projects {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        }
+
+    .project,
+    .umg-project,
+    .football-project,
+    .nlp-project,
+    .db-project {
+        flex: 0 0 80%;
+        max-width: 80%;
+        scroll-snap-align: start;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        overflow: hidden;
+        background-color: white;
+        }
+
+    .project img,
+    .umg-project img,
+    .football-project img,
+    .nlp-project img,
+    .db-project img {
+        width: 100%;
+        height: auto;
+        }
+
+    /* .carousel-btn {
+        display: none !important;
+        } */
+
+    .project-desc h4 {
+        font-size: 16px;
+        }
+
+    .project-desc p {
+        font-size: 14px;
+        }
+    /* Section 4: Contact */
+    .contact-section {
+        padding: 0 20px;
+    }
+}
+
+@media (max-width:400px) {
+    /*NAVBAR*/
+    nav {
+        padding: 0 10px;
+    }
+
+     nav .left a{
+        font-size:20px;
+    }
+
+    nav .right a {
+        font-size:20px;
+        padding: 10px;
+    }
+
+    nav .right a span { 
+        display:none;
+    }
+
+    nav .right a:last-child {
+        color: whitesmoke;
+        background-color: transparent;
+        padding: 10px;
+    }
+
+    /* Section 1: Hero */
+
+    .hero-section {
+        padding: 0 20px;
+    }
+    
+    .hero-section .text h2 {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin-left: auto;
+        font-size: 30px;
+        padding: 0px 0px;
+    }
+
+    .hero-section .headshot img {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        display:flex;
+        margin-left: auto;
+        margin-right: auto;
+        height: auto;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        margin-right: 0;
+    }
+    .hero-section .links a {
+        font-size:14px;
+        display: flex;
+        flex-direction: column; /* stacks icon over text */
+        align-items: center;     /* centers horizontally */
+        justify-content: center; /* centers vertically if needed */
+        text-align: center;       /* optional spacing */
+        text-decoration: none;   /* optional: remove underline */       /* keep text color consistent */
+    }
+    
+    /* Section 2: Skills */
+    .skills-section {
+        padding: 0 20px;
+    }
+
+    .skills-section .cells .cell span {
+        font-size:12px;
+    } 
+     /* Section 3: Projects */
+    .projects-section {
+        padding: 0 10px;
+        }
+
+    .projects-section h2 {
+        font-size: 30px;
+        text-align: center;
+        }
+
+    .projects-section .section-subtitle {
+        font-size: 20px;
+        text-align: center;
+        margin-bottom: 5px;
+        }
+
+    .carousel-wrapper {
+        position: relative;
+        overflow: hidden;
+        }
+
+    .projects-carousel {
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        display:flexbox;
+        gap: 20px;
+        scroll-behavior: smooth;
+        padding-bottom: 10px;
+        }
+
+    .projects {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        }
+
+    .project,
+    .umg-project,
+    .football-project,
+    .nlp-project,
+    .db-project {
+        flex: 0 0 80%;
+        max-width: 80%;
+        scroll-snap-align: start;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        overflow: hidden;
+        background-color: white;
+        }
+
+    .project img,
+    .umg-project img,
+    .football-project img,
+    .nlp-project img,
+    .db-project img {
+        width: 100%;
+        height: auto;
+        }
+
+    /* .carousel-btn {
+        display: none !important;
+        } */
+
+    .project-desc h4 {
+        font-size: 16px;
+        }
+
+    .project-desc p {
+        font-size: 14px;
+        }
+    /* Section 4: Contact */
+    .contact-section {
+        padding: 0 20px;
+    }
 }
