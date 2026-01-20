@@ -37,10 +37,10 @@ a {
 
 /* NAVBAR */
 nav {
-    background-color:black; /* change to your desired color */
+    background-color: black; /* change to your desired color */
     height: 80px; /* adjust height as needed */
     width: 100%;
-    position: relative; /* or fixed if you want it to stay on top during scroll */
+    position: fixed; /* or fixed if you want it to stay on top during scroll */
     z-index: 1000;
 }
 nav {
@@ -48,7 +48,6 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 0 150px;
-    height: 120px;
     position:sticky;
     z-index: 1000;
     top:0 ;
