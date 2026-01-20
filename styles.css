@@ -773,7 +773,7 @@ nav .right a:last-child:hover {
 
     .hero-section .headshot img {
         
-        width: 60%; /* or try something like 200px if you prefer fixed */
+        width: 80%; /* or try something like 200px if you prefer fixed */
         max-width: 300px; /* prevent stretching larger than intended */
         margin-top: 10px;
         margin-bottom: 10px;
@@ -783,7 +783,7 @@ nav .right a:last-child:hover {
         height: auto;
         aspect-ratio: 1 / 1;
         object-fit: cover;
-        margin-right: 0;
+        margin-right: 30px;
     }
     .hero-section .links a {
         font-size:14px;
